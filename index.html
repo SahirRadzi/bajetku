@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | BajetKu.Online</title>
+    <link rel="stylesheet" href="css/calculate_profit.css" />
+
+        <!-- datetimepicker - CSS -->
+        <link rel="stylesheet" href="css/datetimepicker/jquery.datetimepicker.min.css" />
+  </head>
+  <body>
+    <h1>BajetKu.Online</h1>
+
+    <main>
+      <header>
+        <div>
+          <h5>Total Balance</h5>
+          <span id="balance">RM 0.00</span>
+        </div>
+        <div>
+          <h5>Income</h5>
+          <span id="income">RM 0.00</span>
+        </div>
+        <div>
+          <h5>Expense</h5>
+          <span id="expense">RM 0.00</span>
+        </div>
+      </header>
+
+      <section>
+        <h3>Transactions</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+      </section>
+
+      <section>
+        <h3>Add Transaction</h3>
+
+        <form id="transactionForm">
+          <div>
+            <label for="type">
+              <input type="checkbox" name="type" id="type" />
+              <div class="option">
+                <span>Expense</span>
+                <span>Income</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" value="0" min="0.01" step="0.01" required />
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input type="text" name="date" id="timedatePicker" placeholder="Choose Time & Date" autocomplete="off" required />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <footer>
+        <a href="https://toyyibpay.com/Support-Airrs-Venture" class="btn" target="_blank">Support - Buy 1 Burger</a>
+      </br>
+      </br>
+        Used with <i class="fas fa-heart"></i> Buy 1 Burger for me
+        <p>AIRRS VENTURE (003540822-X)</p>
+      </footer>
+    </main>
+
+    <script src="js/datetimepicker/jquery.js"></script>
+    <script src="js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+    <script>
+      $("#timedatePicker").datetimepicker({
+        step: 60,
+        minDate: new Date()
+      });
+    </script>
+
+    <script src="js/calculate_profit.js"></script>
+  </body>
+</html>
