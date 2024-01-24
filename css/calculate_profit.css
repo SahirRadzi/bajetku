@@ -159,7 +159,9 @@ input#type:checked ~ .option::before {
 }
 
 ul {
+  height: 100px;
   list-style-type: none;
+  overflow-y: auto;
 }
 
 ul li {
