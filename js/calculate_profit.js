@@ -44,7 +44,7 @@ function renderList() {
     li.innerHTML = `
       <div class="name">
         <h4>${name}</h4>
-        <p>${new Date(date).toLocaleDateString()}</p>
+        <p>${new Date(date).toLocaleString()}</p>
       </div>
 
       <div class="amount ${type}">
