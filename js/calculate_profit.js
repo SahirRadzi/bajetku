@@ -22,7 +22,7 @@ function updateTotal() {
 
   const balanceTotal = incomeTotal - expenseTotal;
 
-  balance.textContent = formatter.format(balanceTotal).substring(1);
+  balance.textContent = formatter.format(balanceTotal);
   income.textContent = formatter.format(incomeTotal);
   expense.textContent = formatter.format(expenseTotal * -1);
 }
